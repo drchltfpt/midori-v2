@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Common/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <!-- Header -->
+    <div class="wrapper">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-container">
+                <a class="navbar-brand text-logo" href="#">
+                    <i class="fas fa-book-open"></i>Midori
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Feedback</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 search-area">
+                        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search"
+                               aria-label="Search">
+                        <button class="btn my-2 my-sm-0 search-btn" type="submit">Search</button>
+                    </form>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="~/Assets/images/avatar.png" alt="..." class="rounded-circle">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Order</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Products purchased</a>
+                            <a class="dropdown-item" href="#">Favorite product</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                    <a href="#" class="cart-area">
+                        <div class="cart">
+                            <i class="fas fa-shopping-cart"></i>Cart <span class="badge badge-midori cart-amount">2</span>
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Sidebar -->
+    <div class="wrapper">
+        <div class="container body-container">
+            <div class="sidebar bg-light">
+                <div class="nav flex-column" id="">
+
+                    <div class="portfolio">
+                        <p>Book portfolio</p>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#"
+                           data-target="#midori">
+                            Midori Book
+                            store
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="midori" class="collapse in">
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">English Books</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Vietnamese Books</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#" aria-selected="true"
+                           data-target="#publisher" aria-haspopup="true">
+                            Publisher <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="publisher" class="collapse in">
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">English Books</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Vietnamese Books</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#" aria-selected="true"
+                           data-target="#author" aria-haspopup="true">
+                            Author <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="author" class="collapse in">
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Nguyen Nhat Anh</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Vietnamese Books</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#" aria-selected="true"
+                           data-target="#address" aria-haspopup="true">
+                            Delivery address <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="address" class="collapse in">
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Hanoi</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Ho Chi Minh City</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#" aria-selected="true"
+                           data-target="#origin" aria-haspopup="true">
+                            Brand origin <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="origin" class="collapse in">
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Vietnam</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">French</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">China</a>
+                            <a href="#" class="nav-link ml-3 my-1" aria-selected="true">Japan</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-info">
+                        <a class="nav-link" id="" data-toggle="collapse" href="#" aria-selected="true"
+                           data-target="#rating" aria-haspopup="true">
+                            Rating <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div id="rating" class="collapse in">
+                            <a href="#" class="nav-link ml-3" aria-selected="true">
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star"></i>
+                                <p>(at least 4 stars)</p>
+                            </a>
+                            <a href="#" class="nav-link ml-3" aria-selected="true">
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <p>(at least 3 stars)</p>
+                            </a>
+                            <a href="#" class="nav-link ml-3" aria-selected="true">
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <p>(at least 2 stars)</p>
+                            </a>
+                            <a href="#" class="nav-link ml-3" aria-selected="true">
+                                <i class="fas fa-star star-color"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <p>(at least 1 star)</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @RenderBody()
+        </div>
+        <!-- Bottom -->
+        <div class="wrapper">
+            <div class="container bg-light">
+                <div class="row">
+                    <div class="col footer-block">
+                        <div class="footer-title">
+                            <a class="footer-logo" href="#">Midori Book Store</a>
+                        </div>
+                        <div class="footer-content">
+                            <a href="#">About Midori</a>
+                            <a href="#">Midori Careers</a>
+                            <a href="#">Seller Center</a>
+                        </div>
+                    </div>
+                    <div class="col footer-block">
+                        <div class="footer-title">
+                            <h5>CUSTOMER SERVICE</h5>
+                        </div>
+                        <div class="footer-content">
+                            <a href="#">Help Center</a>
+                            <a href="#">How To Buy</a>
+                            <a href="#">Return & Refund</a>
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col footer-block">
+                        <div class="footer-title">
+                            <h5 class="footer-title">PAYMENT</h5>
+                        </div>
+                        <div class="payment-content">
+                            <a href="#" class="payment-logo"><img class="momo" src="/Assets/icons/momo.png" alt=""></a>
+                            <a href="#" class="payment-logo"><img src="/Assets/icons/AP_logo.png" alt=""></a>
+                            <a href="#" class="payment-logo"><img src="/Assets/icons/zalopay-logo.png" alt=""></a>
+                        </div>
+
+                    </div>
+                    <div class="col footer-block">
+                        <div class="footer-title">
+                            <h5 class="footer-title">FOLLOW US</h5>
+                        </div>
+                        <div class="footer-content">
+                            <a href="#"><i class="fab fa-facebook-square follow-icon"></i>Facebook</a>
+                            <a href="#"><i class="fab fa-twitter-square follow-icon"></i>Twitter</a>
+                            <a href="#"><i class="fab fa-instagram follow-icon"></i> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>© 2019 Midori. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End bottom -->
+    </div>
+    <!-- End Sidebar -->
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
